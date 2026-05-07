@@ -1323,8 +1323,10 @@ body.is-hovering .cursor-dot {
   .tech-hint { padding: 0 6vw 1.5rem; }
   .tech-track { padding: 1rem 6vw 1.5rem; }
   .tech-progress-track { margin: 1rem 6vw 0; }
-  .pcard { width: 280px; padding: 1.6rem; }
+  .pcard { width: min(85vw, 340px); padding: 1.6rem; }
   .pcard-title { font-size: 1.6rem; }
+  .pcard-stats { flex-wrap: wrap; gap: 0.8rem 1.2rem; }
+  .stat b { font-size: 1.2rem; }
 
   /* Creative */
   .creative-header { padding: 0 6vw 2.5rem; }
