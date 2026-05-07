@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #080808;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* dot grid */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* red orb */
+  .orb {
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse at 60% 40%, rgba(232,25,44,0.18) 0%, transparent 65%);
+  }
+
+  /* bottom glow */
+  .glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 180px;
+    background: radial-gradient(ellipse, rgba(232,25,44,0.08) 0%, transparent 70%);
+  }
+
+  /* geometric accents */
+  .geo {
+    position: absolute;
+    border: 1px solid rgba(232,25,44,0.18);
+  }
+  .geo-1 { width: 72px; height: 72px; top: 15%; right: 10%; transform: rotate(12deg); }
+  .geo-2 { width: 36px; height: 36px; top: 62%; right: 6%;  transform: rotate(30deg); border-color: rgba(232,25,44,0.08); }
+
+  /* content */
+  .content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 90px;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e8192c;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #e8192c;
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 88px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: #f0f0f0;
+    margin-bottom: 24px;
+  }
+
+  h1 span { color: #e8192c; }
+
+  .sub {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #5c5c5c;
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+  }
+
+  .sub em {
+    font-style: normal;
+    color: #909090;
+  }
+
+  .url {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: inline-flex;
+    padding: 8px 18px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="orb"></div>
+  <div class="glow"></div>
+  <div class="geo geo-1"></div>
+  <div class="geo geo-2"></div>
+
+  <div class="content">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Akshay <span>Kondala.</span></h1>
+    <p class="sub">Software Engineer <em>·</em> Creator</p>
+    <span class="url">akshaykondala.com</span>
+  </div>
+</body>
+</html>
