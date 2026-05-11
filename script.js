@@ -55,7 +55,6 @@ const cursorEl = document.getElementById('heroCursor');
 const subEl    = document.getElementById('heroSub');
 const metaEl   = document.getElementById('heroMeta');
 const ctaEl    = document.getElementById('heroCta');
-const taBtnEl  = document.getElementById('heroBtnTA');
 const scrollEl = document.getElementById('heroScroll');
 
 function type(el, text, speed, onDone) {
@@ -77,7 +76,7 @@ setTimeout(() => {
     setTimeout(() => {
       cursorEl.style.display = 'none';
 
-      gsap.to([subEl, metaEl, ctaEl, taBtnEl, scrollEl], {
+      gsap.to([subEl, metaEl, ctaEl, scrollEl], {
         opacity: 1,
         y: 0,
         duration: 0.85,
