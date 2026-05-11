@@ -195,8 +195,11 @@ img { display: block; max-width: 100%; }
 
 /* ── WORK GRIDS ─────────────────────────────────────────── */
 .wgrid { display: grid; gap: 16px; }
-.wgrid-2x2 { grid-template-columns: repeat(2, 1fr); }
-.wgrid-3   { grid-template-columns: repeat(3, 1fr); }
+.wgrid-2x2  { grid-template-columns: repeat(2, 1fr); }
+.wgrid-3    { grid-template-columns: repeat(3, 1fr); }
+.wgrid-ath  { grid-template-columns: repeat(2, 1fr); }
+.wslot-full { grid-column: 1 / -1; }
+.ar-portrait { aspect-ratio: 3 / 4; }
 
 .wslot-wrap {
   position: relative; overflow: hidden; border-radius: 8px;
