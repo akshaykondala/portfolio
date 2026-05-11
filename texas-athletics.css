@@ -200,8 +200,16 @@ img { display: block; max-width: 100%; }
 .wgrid-ath    { grid-template-columns: repeat(2, 1fr); }
 .wslot-full   { grid-column: 1 / -1; }
 .ar-portrait  { aspect-ratio: 3 / 4; }
-.wgrid-esports { grid-template-columns: 1fr 0.32fr 1fr; align-items: start; }
+.wgrid-esports { grid-template-columns: 1fr 1fr; }
 .ar-9-16      { aspect-ratio: 9 / 16; }
+.wslot-portrait-center {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wslot-portrait-center .wslot-wrap { width: min(260px, 55%); }
+.wslot-portrait-center .wcap { text-align: center; }
 
 .wslot-wrap {
   position: relative; overflow: hidden; border-radius: 8px;
