@@ -292,18 +292,61 @@ img { display: block; max-width: 100%; }
 .wslot.in, .ta-vframe.in { opacity: 1; transform: none; }
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
+
+/* Tablet landscape ─ 900px */
 @media (max-width: 900px) {
-  .wgrid-2x2 { grid-template-columns: repeat(2, 1fr); }
-  .wgrid-3   { grid-template-columns: repeat(2, 1fr); }
+  .ta-wrap   { padding: 80px 40px; }
+  .wgrid-3   { grid-template-columns: 1fr 1fr; }
   .ta-vgrid  { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 600px) {
-  .ta-nav    { padding: 0 20px; }
-  .ta-wrap   { padding: 72px 20px; }
+/* Tablet portrait ─ 768px */
+@media (max-width: 768px) {
+  .ta-wrap      { padding: 72px 32px; }
   .ta-nav-badge { display: none; }
-  .wgrid-2x2, .wgrid-3 { grid-template-columns: 1fr 1fr; }
-  .ta-vgrid  { grid-template-columns: repeat(2, 1fr); }
+  .sect-label   { margin-bottom: 32px; }
+  .work-desc    { margin-bottom: 28px; }
+}
+
+/* Large phone ─ 600px */
+@media (max-width: 600px) {
+  .ta-nav  { padding: 0 20px; }
+  .ta-wrap { padding: 60px 20px; }
+
+  /* Letter: tighter reading size */
+  .ta-letter p { font-size: 15.5px; line-height: 1.8; }
+
+  /* Football: 2-col pair on top, 3rd image full-width featured */
+  .wgrid-3 { grid-template-columns: 1fr 1fr; }
+  .wgrid-3 .wslot:last-child { grid-column: 1 / -1; }
+
+  /* eSports: stack the landscape pair so each fills the width */
+  .wgrid-esports { grid-template-columns: 1fr; }
+
+  /* Hebron Athletics: portrait pair stays 2-col — sizes remain legible */
+
+  /* Videos: 2-col portrait grid */
+  .ta-vgrid { grid-template-columns: repeat(2, 1fr); }
+
   .ta-footer { flex-direction: column; gap: 20px; text-align: center; }
   .ta-footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+}
+
+/* Phone ─ 480px */
+@media (max-width: 480px) {
+  .ta-wrap { padding: 52px 16px; }
+
+  /* Hero title: clamp(68px, 11vw, 136px) bottoms out at 68px which
+     overflows narrow screens — override with a smaller scale */
+  .ta-title { font-size: clamp(36px, 13vw, 56px); }
+
+  /* Scroll line sits behind CTA button on short phones */
+  .ta-hero-scroll { display: none; }
+
+  /* Portrait center: give it a little more relative width on small screens */
+  .wslot-portrait-center .wslot-wrap { width: min(200px, 68%); }
+
+  /* Reduce gap on grids so images breathe without eating padding */
+  .wgrid { gap: 10px; }
+  .ta-vgrid { gap: 10px; }
 }
