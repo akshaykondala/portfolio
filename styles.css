@@ -1345,6 +1345,8 @@ body.is-hovering .cursor-dot {
   /* Recognition */
   .honors-section { padding: 0 0 6rem; }
   .honors-grid { margin: 0 6vw; }
+  .honor-link .honor-title { color: var(--red); }
+  .honor-link .honor-year { color: var(--muted); }
 
   /* Contact */
   .contact-section { padding: 6rem 6vw 4rem; }
