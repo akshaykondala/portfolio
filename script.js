@@ -204,18 +204,7 @@ document.addEventListener('mouseup', () => {
   techOuter.style.userSelect = '';
 });
 
-// Touch support
-techOuter.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].pageX - techOuter.offsetLeft;
-  scrollLeft = techOuter.scrollLeft;
-}, { passive: true });
-
-techOuter.addEventListener('touchmove', (e) => {
-  const x = e.touches[0].pageX - techOuter.offsetLeft;
-  const walk = (x - startX) * 1.2;
-  techOuter.scrollLeft = scrollLeft - walk;
-  updateProgress();
-}, { passive: true });
+// Touch: let native scroll handle momentum — progress bar updates via the scroll listener above
 
 // Wheel: handle both horizontal trackpad swipes and vertical scroll
 techOuter.addEventListener('wheel', (e) => {
