@@ -427,6 +427,9 @@ function animateCount(el) {
   const suffix  = stripped.replace(/^[^0-9]*[0-9.]+/, '');
   const isFloat = stripped.includes('.');
 
+  // Lock element width to final value upfront so growing text doesn't shift layout
+  el.style.minWidth = el.offsetWidth + 'px';
+
   const obj = { val: 0 };
   gsap.to(obj, {
     val: num,
